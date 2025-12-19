@@ -155,13 +155,6 @@ npm run build
 npm run start
 ```
 
-## Branding
-
-The InnovateX theme is customized in `src/admin/app.js`:
-- **Colors:** Green (#10b981), Teal (#14b8a6), Smokey White (#f7f8f9)
-- **Title:** "SYL Admin"
-- **Logo:** Custom favicon and branding
-
 ## Media Storage
 
 - **Local:** Files stored in `public/uploads/`
