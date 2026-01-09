@@ -1,5 +1,25 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface HomepageAnnouncement extends Struct.ComponentSchema {
+  collectionName: 'components_homepage_announcements';
+  info: {
+    displayName: 'Announcement';
+  };
+  attributes: {
+    dismissable: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    enabled: Schema.Attribute.Boolean &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<false>;
+    endDate: Schema.Attribute.Date;
+    linkText: Schema.Attribute.String;
+    linkUrl: Schema.Attribute.String;
+    messege: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    startDate: Schema.Attribute.Date;
+    variant: Schema.Attribute.Enumeration<['info', 'warning', 'success']> &
+      Schema.Attribute.DefaultTo<'info'>;
+  };
+}
+
 export interface HomepageHero extends Struct.ComponentSchema {
   collectionName: 'components_homepage_heroes';
   info: {
@@ -89,6 +109,7 @@ export interface SharedSlider extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'homepage.announcement': HomepageAnnouncement;
       'homepage.hero': HomepageHero;
       'homepage.newsletter': HomepageNewsletter;
       'shared.media': SharedMedia;

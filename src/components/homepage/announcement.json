@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_homepage_announcements",
+  "info": {
+    "displayName": "Announcement"
+  },
+  "options": {},
+  "attributes": {
+    "enabled": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "messege": {
+      "type": "blocks",
+      "required": true
+    },
+    "linkText": {
+      "type": "string"
+    },
+    "linkUrl": {
+      "type": "string"
+    },
+    "variant": {
+      "type": "enumeration",
+      "default": "info",
+      "enum": [
+        "info",
+        "warning",
+        "success"
+      ]
+    },
+    "dismissable": {
+      "type": "boolean",
+      "default": true
+    },
+    "startDate": {
+      "type": "date"
+    },
+    "endDate": {
+      "type": "date"
+    }
+  },
+  "config": {}
+}

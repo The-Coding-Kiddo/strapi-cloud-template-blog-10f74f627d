@@ -15,6 +15,11 @@
       "type": "component",
       "component": "homepage.hero",
       "repeatable": false
+    },
+    "Announcement": {
+      "type": "component",
+      "component": "homepage.announcement",
+      "repeatable": false
     }
   }
 }
